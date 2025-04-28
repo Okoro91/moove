@@ -7,39 +7,66 @@
 
 body {
     line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.highlight {
-    color: #ff5733;
+    font-size: 16px;
+    width: 100%;
 }
 
 
 header {
+    position: relative;
     background: #fff;
-    padding: 20px 0;
     border-bottom: 1px solid #ddd;
+    width: 100vw;
 }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.topmost {
+    position: relative;
+    width: 100%;
+    background-color: #2C2926;
+    padding: 10px 20px;
+}
+
+.topmost a {
+    display: inline-block;
+    color: #fff;
+    margin-right: 10px;
+}
+
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-.logo h1 {
-    font-size: 24px;
-    font-weight: bold;
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
 }
 
 nav ul {
     display: flex;
-    list-style: none;
+    margin-right: 30px;
 }
 
 nav ul li {
@@ -47,24 +74,86 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #333;
     font-weight: 500;
 }
 
-.btn {
+.apply-btn {
     padding: 10px 20px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-}
-
-.btn-primary {
     background: #000;
     color: #fff;
 }
 
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 20px;
+    background-color: #2C2926;
+}
+
+.banner-img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.banner-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    top: 10%;
+    left: 30px;
+    bottom: 0;
+    z-index: 2;
+    color: #fff;
+}
+
+.banner-text h1 {
+    font-size: 52px;
+    font-weight: bolder;
+    letter-spacing: 3.5px;
+    line-height: 1.5;
+}
+
+.vehicle {
+    display: flex;
+    gap: 10px;
+}
+
+.vehicle img {
+    width: 30px;
+}
+
 .btn-orange {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
     background: #ff5733;
     color: #fff;
 }
@@ -72,6 +161,10 @@ nav ul li a {
 .btn-dark {
     background: #333;
     color: #fff;
+}
+
+.partners {
+    margin-top: 250px;
 }
 
 .hero {
