@@ -6,17 +6,23 @@
 }
 
 body {
+    position: relative;
     line-height: 1.6;
     font-size: 16px;
     width: 100%;
+    color: #2C2926;
 }
 
 
 header {
-    position: relative;
+    position: sticky;
+    left: 0;
+    top: 0;
+    right: 0;
     background: #fff;
     border-bottom: 1px solid #ddd;
-    width: 100vw;
+    width: 100%;
+    z-index: 10;
 }
 
 ul {
@@ -64,16 +70,16 @@ header .container {
     width: 100%;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     margin-right: 30px;
 }
 
-nav ul li {
+header nav ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: #333;
     font-weight: 500;
 }
@@ -93,6 +99,7 @@ nav ul li a {
     height: 100vh;
     margin-bottom: 20px;
     background-color: #2C2926;
+    overflow: hidden;
 }
 
 .banner-img {
@@ -107,6 +114,7 @@ nav ul li a {
     right: 0;
     bottom: 0;
     z-index: 0;
+    overflow: hidden;
 }
 
 .banner-img img {
@@ -116,6 +124,7 @@ nav ul li a {
     right: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .banner-text {
@@ -148,6 +157,7 @@ nav ul li a {
 
 .vehicle img {
     width: 30px;
+    overflow: hidden;
 }
 
 .orange-btn {
@@ -207,6 +217,7 @@ nav ul li a {
 .steps-img-bg {
     flex: 1 0;
     background: url('assets/step-img-bg.png') no-repeat center/cover;
+    overflow: hidden;
 }
 .steps-img {
     display: flex;
@@ -215,6 +226,7 @@ nav ul li a {
     gap: 20px;
     background: #FFFFFF;
     opacity: 0.9;
+    overflow: hidden;
 }
 
 .step p{
@@ -245,12 +257,15 @@ nav ul li a {
     object-fit: cover;
     object-position: center;
     z-index: 0;
+    overflow: hidden;
 }
 video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    overflow: hidden;
+
 }
 
 .customers-text {
@@ -258,8 +273,8 @@ video {
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 20px;
     width: 290px;
+    height: 450px;
     position: absolute;
     top: 5%;
     left: 30px;
@@ -271,6 +286,7 @@ video {
 .customers-text h2  {
     font-size: 46px;
     line-height: 1.1;
+    margin-bottom: 10px;
 }
 .customers-text h2 span {
     color: #FF4300;
@@ -281,19 +297,36 @@ video {
 .customers blockquote {
     font-size: 18px;
     line-height: 1.3;
-}
-
-
-.vehicles {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.vehicles h2 {
-    font-size: 36px;
     margin-bottom: 10px;
 }
 
+.vehicles-choice {
+    width: 100%;
+}
+
+.vehicles {
+    display: flex;
+    align-items: start  ;
+    justify-content: start;
+    padding: 95px 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.vehicles-text {
+    text-align: left;
+    max-width: 330px;
+    width: 100%;
+}
+
+.vehicles-text h2 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+.vehicles-text h2 span {
+    color: #FF4300;
+}
 .vehicles p {
     margin-bottom: 30px;
 }
@@ -304,31 +337,45 @@ video {
     margin-bottom: 30px;
 }
 
-.vehicle-grid img {
-    width: 150px;
+.vehicles-img img {
+    width: 100%;
 }
 
 
-.partners {
-    padding: 50px 0;
+.vehicles-dream {
+    padding: 30px 75px;
     text-align: center;
 }
 
-.partner-logos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.vehicles-dream p {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
 }
 
-.partner-logos img {
-    width: 80px;
-    margin: 10px;
+.vehicles-logos ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 125px;
+}
+
+.vehicles-logos ul li {
+    width: 82px;
+    margin: 20px;
+}
+
+.vehicles-logos img {
+    width: 100%;
 }
 
 .impact {
+    width: 100%;
     background: #333;
     color: #fff;
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -337,19 +384,22 @@ video {
     margin-bottom: 30px;
 }
 
-.impact-grid {
+.impact-text {
     display: flex;
     justify-content: space-around;
-    text-align: left;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .impact-item {
-    max-width: 300px;
+    flex-shrink: 0;
+    max-width: 290px;
+    width: 100%;
 }
 
 .impact-item h3 {
     font-size: 48px;
-    color: #ff5733;
+    color: #FFFFFF;
 }
 
 .impact-item h4 {
@@ -357,80 +407,158 @@ video {
     margin: 10px 0;
 }
 
+.impact-item p {
+    font-weight: 400;
+    color: #999791;
+}
+
 .app {
-    padding: 50px 0;
-    background: #ff5733;
+    position: relative;
+    width: 100%;
+    background: #fdfbfb;
     color: #fff;
 }
 
 .app-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
+    gap: 45px;
+    padding: 0 95px;
+    width: 100%;
+    z-index: 1;
 }
 
 .app-text {
-    max-width: 50%;
+    width: 100%;
+    padding-right: 90px;
+    margin-right: 20px;
 }
 
 .app-text h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    line-height: 1.1;
 }
 
+.app-text p {
+    margin-bottom: 20px;
+}
+
+.app-image  {
+    width: 100%;
+    order: -1;
+}
 .app-image img {
-    width: 300px;
+    width: 100%;
+    height: 100%;
 }
 
 .btn-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     background: #000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 5px;
-    display: inline-flex;
     align-items: center;
+}
+
+.app-inner-bg {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    right: 20%;
+    background: rgb(255, 67, 0);
+    height: 27rem;
+    border-radius: 0px 215px 215px 0px;
+    z-index: 0;
 }
 
 footer {
-    background: #333;
+    width: 100%;
+    background-color: #2C2926;
     color: #fff;
-    padding: 30px 0;
-    text-align: center;
+    padding: 30px 20px;
 }
 
-footer .container {
+.footer-links {
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   padding: 20px 30px;
+}
+
+.footer-contact {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
 }
 
-footer nav ul {
-    flex-direction: row;
-    margin: 20px 0;
+.footer-logo {
+    margin: -45px 0 30px;
 }
 
-footer nav ul li {
-    margin: 0 10px;
+
+.footer-socials ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
 }
 
-.footer-social {
-    margin: 20px 0;
+.footer-socials a {
+    color: rgb(153, 151, 145);
 }
 
-.footer-social a {
-    margin: 0 10px;
+.footer-nav {
+    width: 100%;
 }
 
-.footer-social img {
-    width: 24px;
+.footer-nav nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.footer-legal p {
-    margin: 5px 0;
+.footer-nav a {
+    color: #fdfbfb;
+}
+
+.footer-region {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.footer-region p {
+    display: block;
+    margin-bottom: 10px;
+    color: rgb(153, 151, 145);
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(153, 151, 145);
+    border-top: 1px solid rgb(153, 151, 145);
+    padding-top: 30px;
+
+}
+
+.footer-legal ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
 }
 
 .footer-legal a {
-    color: #fff;
-    text-decoration: none;
+    color: rgb(153, 151, 145);
 }
+
+
 
