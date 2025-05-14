@@ -266,13 +266,14 @@ pre {
 }
 
 .get-started {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     background-color: #2C2926;
     color: #FFFFFF;
     border-color: transparent;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 30px;
+    text-transform: uppercase;
 }
 
 .steps-img-bg {
@@ -383,20 +384,23 @@ video {
 
 .vehicles-text {
     text-align: left;
-    max-width: 330px;
+    max-width: 230px;
     width: 100%;
 }
 
 .vehicles-text h2 {
     font-size: 46px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     line-height: 1.1;
 }
 .vehicles-text h2 span {
     color: #FF4300;
 }
 .vehicles p {
-    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 35px;
+    line-height: 26px;
 }
 
 .vehicle-grid {
@@ -449,6 +453,7 @@ video {
 
 .impact h2 {
     font-size: 36px;
+    font-weight: 600;
     margin-bottom: 30px;
 }
 
@@ -466,7 +471,8 @@ video {
 }
 
 .impact-item h3 {
-    font-size: 48px;
+    font-size: 68px;
+    font-weight: 600;
     color: #FFFFFF;
 }
 
