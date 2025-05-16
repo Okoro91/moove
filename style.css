@@ -653,6 +653,66 @@ footer {
         font-size: 24px;
 
     }
+
+    .banner {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-img {
+        position: relative;
+    }
+
+    .banner-text {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 75px;
+        left: 0;
+    }
+
+    .banner-text-top {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-text-top h1 {
+        font-size: 38px;
+    }
+
+     .banner-text-top p{
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .vehicle {
+        margin-top: 10px;
+    }
+
+    .partners {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .partners p {
+        display: none;
+    }
+
+    .steps {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .steps-img-bg {
+        width: 100%;
+        margin-top: 40px;
+    }
 }
 
 
